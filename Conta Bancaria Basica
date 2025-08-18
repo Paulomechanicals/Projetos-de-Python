@@ -1,0 +1,19 @@
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+
+    def depositar(self, valor):
+        self.saldo += valor
+        print(f"Depósito de R${valor} realizado. Saldo atual: R${self.saldo}")
+
+    def sacar(self, valor):
+        if self.saldo >= valor:
+            self.saldo -= valor
+            print(f"Saque de R${valor} realizado. Saldo atual: R${self.saldo}")
+        else:
+            print("Saldo insuficiente!")
+
+conta = ContaBancaria("Paulo", 100)
+conta.depositar(int(input("Qual valor deseja depositar: ")))
+conta.sacar(int(input("Quanto quer sacar: ")))
