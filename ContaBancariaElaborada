@@ -46,3 +46,7 @@ if usuario == conta.titular and conta.verificar_senha(senha):
 
         else:
             print("Opção inválida!")
+
+else:
+    Print("\n Confira as credenciais.")
+    sys.exit()
